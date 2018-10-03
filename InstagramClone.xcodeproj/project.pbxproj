@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		21E6976D1F41DA56DCA268B7 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C6AB22D55407C2CC692126 /* Pods_InstagramClone.framework */; };
 		302E64AD21645FE60093CCDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E64AC21645FE60093CCDB /* LoginViewController.swift */; };
+		302E64B021646BAB0093CCDB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E64AF21646BAB0093CCDB /* HomeViewController.swift */; };
 		30CBF8EA216458CB003E5015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBF8E9216458CB003E5015 /* AppDelegate.swift */; };
 		30CBF8EF216458CB003E5015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CBF8ED216458CB003E5015 /* Main.storyboard */; };
 		30CBF8F1216458CB003E5015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CBF8F0216458CB003E5015 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		15C6AB22D55407C2CC692126 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		302E64AC21645FE60093CCDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		302E64AF21646BAB0093CCDB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30CBF8E6216458CB003E5015 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CBF8E9216458CB003E5015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30CBF8EE216458CB003E5015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				302E64AC21645FE60093CCDB /* LoginViewController.swift */,
+				302E64AF21646BAB0093CCDB /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 			files = (
 				302E64AD21645FE60093CCDB /* LoginViewController.swift in Sources */,
 				30CBF8EA216458CB003E5015 /* AppDelegate.swift in Sources */,
+				302E64B021646BAB0093CCDB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
