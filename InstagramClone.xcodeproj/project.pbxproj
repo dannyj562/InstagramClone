@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		21E6976D1F41DA56DCA268B7 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C6AB22D55407C2CC692126 /* Pods_InstagramClone.framework */; };
+		302E64AD21645FE60093CCDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E64AC21645FE60093CCDB /* LoginViewController.swift */; };
 		30CBF8EA216458CB003E5015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBF8E9216458CB003E5015 /* AppDelegate.swift */; };
-		30CBF8EC216458CB003E5015 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBF8EB216458CB003E5015 /* ViewController.swift */; };
 		30CBF8EF216458CB003E5015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CBF8ED216458CB003E5015 /* Main.storyboard */; };
 		30CBF8F1216458CB003E5015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CBF8F0216458CB003E5015 /* Assets.xcassets */; };
 		30CBF8F4216458CB003E5015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CBF8F2216458CB003E5015 /* LaunchScreen.storyboard */; };
@@ -38,9 +38,9 @@
 
 /* Begin PBXFileReference section */
 		15C6AB22D55407C2CC692126 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		302E64AC21645FE60093CCDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		30CBF8E6216458CB003E5015 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CBF8E9216458CB003E5015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30CBF8EB216458CB003E5015 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30CBF8EE216458CB003E5015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30CBF8F0216458CB003E5015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30CBF8F3216458CB003E5015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +99,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		302E64AE21645FED0093CCDB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				302E64AC21645FE60093CCDB /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		30CBF8DD216458CB003E5015 = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +132,8 @@
 		30CBF8E8216458CB003E5015 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				302E64AE21645FED0093CCDB /* ViewControllers */,
 				30CBF8E9216458CB003E5015 /* AppDelegate.swift */,
-				30CBF8EB216458CB003E5015 /* ViewController.swift */,
 				30CBF8ED216458CB003E5015 /* Main.storyboard */,
 				30CBF8F0216458CB003E5015 /* Assets.xcassets */,
 				30CBF8F2216458CB003E5015 /* LaunchScreen.storyboard */,
@@ -301,16 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-InstagramClone/Pods-InstagramClone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
@@ -325,15 +329,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-InstagramCloneTests-checkManifestLockResult.txt",
 			);
@@ -347,15 +347,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-InstagramCloneUITests-checkManifestLockResult.txt",
 			);
@@ -369,15 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-InstagramClone-checkManifestLockResult.txt",
 			);
@@ -393,7 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30CBF8EC216458CB003E5015 /* ViewController.swift in Sources */,
+				302E64AD21645FE60093CCDB /* LoginViewController.swift in Sources */,
 				30CBF8EA216458CB003E5015 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
