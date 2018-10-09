@@ -38,26 +38,35 @@ class LoginViewController: UIViewController {
         newUser.username = usernameTextField.text
         newUser.password = passwordTextField.text
         
-        newUser.signUpInBackground { (success: Bool, error: Error?) -> Void in
-            if success {
-                print("Created a user")
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            } else {
-                print(error!.localizedDescription)
+        DispatchQueue.global(qos: .userInteractive).async {
+            newUser.signUpInBackground { (success: Bool, error: Error?) -> Void in
+                if success {
+                    print("Created a user")
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                } else {
+                    print(error!.localizedDescription)
+                }
+            }
+            DispatchQueue.main.async {
+                
             }
         }
+        
     }
     
     private func loginUser() {
-        PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!) {
-            (user: PFUser?, error: Error?) -> Void in
-            if user != nil {
-                print("You are logged in")
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            } else {
-                print("User logged in failed: \(error!.localizedDescription)")
+        DispatchQueue.main.async {
+            PFUser.logInWithUsername(inBackground: self.usernameTextField.text!, password: self.passwordTextField.text!) {
+                (user: PFUser?, error: Error?) -> Void in
+                if user != nil {
+                    print("You are logged in")
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                } else {
+                    print("User logged in failed: \(error!.localizedDescription)")
+                }
             }
         }
+        
     }
     
     /*

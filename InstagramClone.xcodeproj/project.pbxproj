@@ -10,6 +10,9 @@
 		21E6976D1F41DA56DCA268B7 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C6AB22D55407C2CC692126 /* Pods_InstagramClone.framework */; };
 		302E64AD21645FE60093CCDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E64AC21645FE60093CCDB /* LoginViewController.swift */; };
 		302E64B021646BAB0093CCDB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E64AF21646BAB0093CCDB /* HomeViewController.swift */; };
+		302E64B221647FCE0093CCDB /* PostPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E64B121647FCE0093CCDB /* PostPhotoViewController.swift */; };
+		302E64B6216484810093CCDB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E64B5216484810093CCDB /* Post.swift */; };
+		302E64B921648B2F0093CCDB /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E64B821648B2F0093CCDB /* PhotoCell.swift */; };
 		30CBF8EA216458CB003E5015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBF8E9216458CB003E5015 /* AppDelegate.swift */; };
 		30CBF8EF216458CB003E5015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CBF8ED216458CB003E5015 /* Main.storyboard */; };
 		30CBF8F1216458CB003E5015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CBF8F0216458CB003E5015 /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 		15C6AB22D55407C2CC692126 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		302E64AC21645FE60093CCDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		302E64AF21646BAB0093CCDB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		302E64B121647FCE0093CCDB /* PostPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPhotoViewController.swift; sourceTree = "<group>"; };
+		302E64B5216484810093CCDB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		302E64B821648B2F0093CCDB /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		30CBF8E6216458CB003E5015 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CBF8E9216458CB003E5015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30CBF8EE216458CB003E5015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,8 +112,25 @@
 			children = (
 				302E64AC21645FE60093CCDB /* LoginViewController.swift */,
 				302E64AF21646BAB0093CCDB /* HomeViewController.swift */,
+				302E64B121647FCE0093CCDB /* PostPhotoViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		302E64B721648B0D0093CCDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				302E64B821648B2F0093CCDB /* PhotoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		305F67D921656A9B005CD849 /* PostModel */ = {
+			isa = PBXGroup;
+			children = (
+				302E64B5216484810093CCDB /* Post.swift */,
+			);
+			path = PostModel;
 			sourceTree = "<group>";
 		};
 		30CBF8DD216458CB003E5015 = {
@@ -135,6 +158,8 @@
 		30CBF8E8216458CB003E5015 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				305F67D921656A9B005CD849 /* PostModel */,
+				302E64B721648B0D0093CCDB /* Views */,
 				302E64AE21645FED0093CCDB /* ViewControllers */,
 				30CBF8E9216458CB003E5015 /* AppDelegate.swift */,
 				30CBF8ED216458CB003E5015 /* Main.storyboard */,
@@ -316,11 +341,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-InstagramClone/Pods-InstagramClone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/ParseUI/ParseUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -390,7 +417,10 @@
 			files = (
 				302E64AD21645FE60093CCDB /* LoginViewController.swift in Sources */,
 				30CBF8EA216458CB003E5015 /* AppDelegate.swift in Sources */,
+				302E64B221647FCE0093CCDB /* PostPhotoViewController.swift in Sources */,
 				302E64B021646BAB0093CCDB /* HomeViewController.swift in Sources */,
+				302E64B921648B2F0093CCDB /* PhotoCell.swift in Sources */,
+				302E64B6216484810093CCDB /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
