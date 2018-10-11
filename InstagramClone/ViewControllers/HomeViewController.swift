@@ -57,7 +57,7 @@ class HomeViewController: UIViewController {
         let query = PFQuery(className: "Post")
         query.order(byDescending: "createdAt")
         query.includeKey("author")
-        query.limit = 2
+        query.limit = 20
         
         query.findObjectsInBackground {
             (objects: [PFObject]?, error: Error?) -> Void in
@@ -109,7 +109,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         for post in instagramPosts {
             print("Instagram Post \(post)")
             cell.post = post
-            self.photoTableView.reloadData()
         }
         return cell
     }

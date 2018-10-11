@@ -8,18 +8,21 @@
 
 import UIKit
 import Parse
-import ParseUI
+import AFNetworking
 
 class PhotoCell: UITableViewCell {
     
-    @IBOutlet weak var photoImageView: PFImageView!
+    @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
     
     var post: PFObject! {
         didSet {
-            let x = self.post.value(forKey: "media") as? PFFile
-            print(x?.url)
-            self.captionLabel.text = self.post.value(forKey: "caption") as? String
+            if let urlString = post.media.url {
+                self.photoImageView.setImageWith(URL(string: urlString)!)
+            }
+            //let x = self.post.value(forKey: "media") as? PFFile
+            //print(x?.url)
+            //self.captionLabel.text = self.post.value(forKey: "caption") as? String
         }
     }
     

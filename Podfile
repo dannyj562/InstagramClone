@@ -6,6 +6,7 @@ target 'InstagramClone' do
   use_frameworks!
   pod 'Parse'
   pod 'ParseUI'
+  pod 'AFNetworking'
 
   # Pods for InstagramClone
 
